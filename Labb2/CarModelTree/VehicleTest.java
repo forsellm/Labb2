@@ -22,7 +22,7 @@ public class VehicleTest {
     public void testTurnLeft(){
         Volvo240 v = new Volvo240();
         v.turnLeft();
-        assertTrue(v.getFacingDirection() == Directions.WEST) ;
+        assertTrue(v.getFacingDirection() == Directions.WEST);
     }
     @Test
     public void testTurnRight(){

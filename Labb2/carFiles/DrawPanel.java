@@ -7,6 +7,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 // This panel represent the animated part of the view with the car images.
+// This is a test comment
 
 public class DrawPanel extends JPanel{
 
@@ -19,6 +20,8 @@ public class DrawPanel extends JPanel{
     void moveit(int x, int y){
         volvoPoint.x = x;
         volvoPoint.y = y;
+        volvoPoint.y = y;
+
     }
 
     // Initializes the panel and reads the images
