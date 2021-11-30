@@ -5,7 +5,7 @@ public enum Directions {
     private final int xDelta;
     private final int yDelta;
 
-    private Directions(int xDelta, int yDelta){
+    Directions(int xDelta, int yDelta){
         this.xDelta = xDelta;
         this.yDelta = yDelta;
     }
