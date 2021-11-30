@@ -1,4 +1,4 @@
-package CarModelTree;
+package VehicleFiles;
 
 import java.awt.*;
 
@@ -8,6 +8,9 @@ import java.awt.*;
  */
 public abstract class Truck extends Vehicle {
 
+    /**
+     * boolean stating whether the truck bed is raised
+     */
     private boolean isTruckBedRaised;
 
     /**
@@ -35,42 +38,53 @@ public abstract class Truck extends Vehicle {
 
     /**
      * Raises the truck bed bas long as it is not already raised and the truck is stationary
+     * @return boolean stating whether the truck bed was raised
      */
-    public void raiseTruckBed(){
+    public boolean raiseTruckBed(){
         if (this.getCurrentSpeed()==0 && !isTruckBedRaised){
-                isTruckBedRaised=true;
-        } else {System.out.println("Could not mark truck bed as raised");}
+            setTruckBedRaised(true);
+            return true;
+        } else {
+            System.out.println("Could not mark truck bed as raised");
+            return false;
+        }
     }
 
     /**
      * Lowers the truck bed as long as it is not already lowered and the truck is stationary
+     * @return boolean stating whether the truck bed was raised
      */
-    public void lowerTruckBed() {
+    public boolean lowerTruckBed() {
         if (this.getCurrentSpeed() == 0 && isTruckBedRaised) {
-                isTruckBedRaised=false;
+            setTruckBedRaised(false);
+            return true;
         } else {
             System.out.println("Could not mark truck bed as lowered");
+            return false;
         }
     }
 
     /**
      * Calls incrementSpeed, catches RuntimeException if input exception occurred
      * @param amount the amount to increase speed with
+     * @return boolean stating whether the car was able to gas
      */
     @Override
-    public void gas(double amount){
-        if (!isTruckBedRaised){
-            super.gas(amount);
+    public boolean gas(double amount){
+        boolean tempStatus = false;
+        if (!getTruckBedStatus()){
+           tempStatus = super.gas(amount);
         }else{
             System.out.println("Could not gas");
         }
+        return tempStatus;
     }
 
     /**
      * Sets the status of the truck bed, true for raised, false for lowered.
      * @param setAs the new status of the truck bed
      */
-    public void setTruckBedRaised(boolean setAs){
+    private void setTruckBedRaised(boolean setAs){
         this.isTruckBedRaised = setAs;
     }
 
@@ -79,11 +93,7 @@ public abstract class Truck extends Vehicle {
      * @return if the truck bed is lowered or raised
      */
     public boolean getTruckBedStatus(){
-        if (isTruckBedRaised){
-            return true;
-        }else{
-            return false;
-        }
+        return isTruckBedRaised;
     }
 
 }

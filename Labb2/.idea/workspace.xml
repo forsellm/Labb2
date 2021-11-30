@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b8770b4-1751-4abc-a609-2326616f2686" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CarCarrierTruck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PassengerCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scania.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServiceStation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TempMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Truck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CarTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/Saab95.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/Volvo240.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Labb 1/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Labb 1/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Labb 1/CarTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Labb 1/Movable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Labb 1/Saab95.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Labb 1/Volvo240.java" beforeDir="false" />
-    </list>
+    <list default="true" id="1b8770b4-1751-4abc-a609-2326616f2686" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +19,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/carFiles" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

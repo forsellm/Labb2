@@ -1,4 +1,4 @@
-package CarModelTree;
+package VehicleFiles;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -34,11 +34,6 @@ public abstract class Vehicle implements Movable{
      * Number of doors on this car, as long as the car isn't heavily modified
      */
     private final int nrDoors;
-
-    /**
-     * Directions for these cars
-     */
-
 
     /**
      * The direction this car is facing
@@ -157,7 +152,7 @@ public abstract class Vehicle implements Movable{
      * Turns this car 90 degrees left
      */
     public void turnLeft(){
-        this.facingDirection = this.facingDirection.gerCounterClockwiseDirection();
+        this.facingDirection = this.facingDirection.getCounterClockwiseDirection();
     }
 
     /**
@@ -170,13 +165,19 @@ public abstract class Vehicle implements Movable{
     /**
      * Calls incrementSpeed, catches RuntimeException if input exception occurred
      * @param amount the amount to increase speed with
+     * @return boolean stating whether the car was able to gas
      */
-    public void gas(double amount){
+    public boolean gas(double amount){
         if (amountIsOk(amount)){
             incrementSpeed(amount);
         }
+        return amountIsOk(amount);
     }
 
+    /**
+     * @param amount amount to determine whether it is inside the interval of 0 and 1
+     * @return a boolean that determines if the value was inside the accepted interval of 0 and 1
+     */
     private boolean amountIsOk(double amount) {
         if (amount>=0 && amount <= 1) {
             return true;
@@ -189,11 +190,13 @@ public abstract class Vehicle implements Movable{
     /**
      * Calls decrementSpeed, catches RuntimeException if value is greater than 0 and less than 1
      * @param amount the amount decrease speed with
+     * @return boolean stating whether the car was able to brake
      */
-    public void brake(double amount){
+    public boolean brake(double amount){
         if (amountIsOk(amount)){
             decrementSpeed(amount);
         }
+        return amountIsOk(amount);
     }
 
     /**

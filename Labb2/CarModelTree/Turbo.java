@@ -1,9 +1,8 @@
-package CarModelTree;
+package VehicleFiles;
 
 public interface Turbo {
-    boolean turboOn = false;
-
     void setTurboOn();
+    void setTurboOff();
 
     boolean getTurboStatus();
 }

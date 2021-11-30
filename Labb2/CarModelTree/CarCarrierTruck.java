@@ -1,4 +1,4 @@
-package CarModelTree;
+package VehicleFiles;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -28,13 +28,16 @@ public class CarCarrierTruck extends Truck{
      * Loads a car on the truck, as long as the truck has capacity, the truck bed is raised so
      * the car can enter, and the car and truck is close to each other
      * @param car the car to be loaded onto the truck
+     * @return true if the car was successfully added
      */
-    public void addCar(PassengerCar car){
+    public boolean addCar(PassengerCar car){
         if (cars.size()<maxCapacity && getTruckBedStatus() && isClose(car)) {
             cars.add(car);
             car.setPosition(this.getPosition());
+            return true;
         } else {
             System.out.println("Something went wrong when loading the truck");
+            return false;
         }
     }
 
@@ -62,13 +65,16 @@ public class CarCarrierTruck extends Truck{
 
     /**
      * Unload the last car to be loaded, removing it from the list
+     * @return true if a car was unloaded
      */
-    public void removeCar(){
+    public boolean removeCar(){
         if (getTruckBedStatus() && this.getNumberLoadedCars()>0){
             cars.get(cars.size()-1).setPosition(new Point2D.Double(this.getPosition().x-1,this.getPosition().y-1));
             cars.remove(cars.size()-1);
+            return true;
         }else {
             System.out.println("Truck bed is closed");
+            return false;
         }
     }
 

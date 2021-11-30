@@ -1,4 +1,4 @@
-package CarModelTree;
+package VehicleFiles;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,18 +27,19 @@ public class ServiceStation<T extends Vehicle> {
      * Adds a vehicle to a list of all cars current in the service station, as long as the vehicle
      * type is the declared car type or a subtype of it.
      * @param c the car that is being added to the Service Station
+     * @return boolean stating whether a car was added
      */
-    void addCar(T c){
+    public boolean addCar(T c){
         if (carsInService.size()<maxCars){
             carsInService.add(c);
         }else{
             System.out.println("The service station is full");
         }
-
+        return(carsInService.size()<maxCars);
     }
     /**
-    * Removes the vehicle in index 0 of the list of cars, and returns that car
-     * @return the car in index 0 of the list
+    * Removes a specified vehicle from the list, and returns that car
+    * @return the specified car
     */
     public T removeCar(T car){
        carsInService.remove(car);
