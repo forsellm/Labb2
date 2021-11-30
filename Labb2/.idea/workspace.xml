@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b8770b4-1751-4abc-a609-2326616f2686" name="Changes" comment="" />
+    <list default="true" id="1b8770b4-1751-4abc-a609-2326616f2686" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarModelTree/CarCarrierTruck.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/CarCarrierTruck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarModelTree/Directions.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Directions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarModelTree/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Movable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarModelTree/PassengerCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/PassengerCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarModelTree/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Saab95.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarModelTree/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Scania.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarModelTree/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carFiles/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/carFiles/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carFiles/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/carFiles/DrawPanel.java" afterDir="false" />
+    </list>
+    <list id="7c665b27-020f-4e67-911d-ac62e6f106cf" name="Changes by cecilianyberg" comment="">
+      <change beforePath="$PROJECT_DIR$/carFiles/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/carFiles/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carFiles/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/carFiles/DrawPanel.java" afterDir="false" />
+    </list>
+    <list id="a55c440b-b26a-46e0-b5a5-5798f2857979" name="Changes by Hule-Elev" comment="">
+      <change beforePath="$PROJECT_DIR$/CarModelTree/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Saab95.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarModelTree/ServiceStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/ServiceStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarModelTree/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarModelTree/Turbo.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Turbo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarModelTree/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Volvo240.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carFiles/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/carFiles/CarView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carFiles/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/carFiles/DrawPanel.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +34,38 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/CarModelTree/Saab95.java">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="3" end1="3" start2="3" end2="4" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
+        <range start1="9" end1="9" start2="10" end2="12" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/carFiles/CarController.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="24" end1="25" start2="25" end2="26" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="32" end1="33" start2="33" end2="37" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="40" end1="40" start2="44" end2="45" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="46" end1="51" start2="51" end2="56" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="53" end1="53" start2="58" end2="60" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="60" end1="62" start2="67" end2="69" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="64" end1="64" start2="71" end2="110" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="65" end1="65" start2="111" end2="112" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/carFiles/DrawPanel.java">
+      <ranges>
+        <range start1="1" end1="1" start2="1" end2="3" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="15" end1="15" start2="17" end2="19" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
+        <range start1="16" end1="17" start2="20" end2="22" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="19" end1="24" start2="24" end2="27" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="25" end1="25" start2="28" end2="29" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="40" end1="40" start2="44" end2="46" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectId" id="212X6UWNuEy3AnuoYKYT7pZW0PC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -19,10 +76,31 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/carFiles" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="carFiles.CarController" />
+      <module name="DIT953-lab1-master" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="carFiles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CarController" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

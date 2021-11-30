@@ -1,4 +1,6 @@
 package carFiles;
+import CarModelTree.Vehicle;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -14,14 +16,13 @@ public class DrawPanel extends JPanel{
     // Just a single image, TODO: Generalize
     BufferedImage volvoImage;
     // To keep track of a singel cars position
-    Point volvoPoint = new Point();
+    Point tempPoint = new Point();
+
 
     // TODO: Make this genereal for all cars
-    void moveit(int x, int y){
-        volvoPoint.x = x;
-        volvoPoint.y = y;
-        volvoPoint.y = y;
-
+    void moveit(Vehicle v, int x, int y){
+        tempPoint.x = x;
+        tempPoint.y = y;
     }
 
     // Initializes the panel and reads the images

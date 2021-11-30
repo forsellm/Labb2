@@ -1,4 +1,4 @@
-package VehicleFiles;
+package CarModelTree;
 
 public interface Movable {
     void move();

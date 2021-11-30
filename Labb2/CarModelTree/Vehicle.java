@@ -1,4 +1,4 @@
-package VehicleFiles;
+package CarModelTree;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -161,6 +161,11 @@ public abstract class Vehicle implements Movable{
     public void turnRight() {
         this.facingDirection = this.facingDirection.getClockwiseDirection();
     }
+
+    /**
+     * Turns this car 180 degrees
+     */
+    public void invertDirection(){this.facingDirection = this.facingDirection.getInverseDirection();}
 
     /**
      * Calls incrementSpeed, catches RuntimeException if input exception occurred

@@ -1,4 +1,4 @@
-package VehicleFiles;
+package CarModelTree;
 
 public enum Directions {
     NORTH(0,1), EAST(1,0), SOUTH(0,-1), WEST(-1,0);
@@ -46,4 +46,14 @@ public enum Directions {
         int ordinal = (this.ordinal() +3) % 4;
         return Directions.values()[ordinal];
     }
+
+    /**
+     * Gets inverse direction
+     * @return inverse direction
+     */
+    public Directions getInverseDirection(){
+        int ordinal = (this.ordinal() +2) % 4;
+        return Directions.values()[ordinal];
+    }
+
 }
