@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b8770b4-1751-4abc-a609-2326616f2686" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1b8770b4-1751-4abc-a609-2326616f2686" name="Changes" comment="Labb 2">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DIT953-lab1-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DIT953-lab1-master.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarModelTree/CarCarrierTruck.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/CarCarrierTruck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarModelTree/Directions.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Directions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarModelTree/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Movable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarModelTree/PassengerCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/PassengerCar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarModelTree/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Saab95.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarModelTree/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Scania.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarModelTree/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Truck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarModelTree/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarModelTree/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Volvo240.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/PassangerCarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PassangerCarTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carFiles/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/carFiles/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carFiles/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/carFiles/CarView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carFiles/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/carFiles/DrawPanel.java" afterDir="false" />
     </list>
     <list id="7c665b27-020f-4e67-911d-ac62e6f106cf" name="Changes by cecilianyberg" comment="">
@@ -24,6 +24,8 @@
       <change beforePath="$PROJECT_DIR$/CarModelTree/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Truck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarModelTree/Turbo.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Turbo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarModelTree/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarModelTree/Volvo240.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/ServiceStationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/ServiceStationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/TruckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TruckTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carFiles/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/carFiles/CarView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carFiles/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/carFiles/DrawPanel.java" afterDir="false" />
     </list>
@@ -36,34 +38,62 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/CarModelTree/Saab95.java">
-      <ranges>
-        <range start1="0" end1="1" start2="0" end2="1" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
-        <range start1="3" end1="3" start2="3" end2="4" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
-        <range start1="9" end1="9" start2="10" end2="12" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/carFiles/CarController.java">
       <ranges>
         <range start1="2" end1="2" start2="2" end2="3" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
-        <range start1="24" end1="25" start2="25" end2="26" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
-        <range start1="32" end1="33" start2="33" end2="37" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
-        <range start1="40" end1="40" start2="44" end2="45" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
-        <range start1="46" end1="51" start2="51" end2="56" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
-        <range start1="53" end1="53" start2="58" end2="60" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
-        <range start1="60" end1="62" start2="67" end2="69" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
-        <range start1="64" end1="64" start2="71" end2="110" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
-        <range start1="65" end1="65" start2="111" end2="112" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="4" end1="4" start2="5" end2="7" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="5" end1="5" start2="8" end2="11" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="24" end1="25" start2="30" end2="32" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="32" end1="33" start2="39" end2="45" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="41" end1="41" start2="53" end2="54" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="46" end1="51" start2="59" end2="66" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="54" end1="54" start2="69" end2="70" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="62" end1="64" start2="78" end2="153" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="66" end1="67" start2="155" end2="172" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/CarModelTree/Volvo240.java">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
+        <range start1="2" end1="2" start2="2" end2="5" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="3" end1="3" start2="6" end2="8" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="17" end1="17" start2="22" end2="23" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="20" end1="20" start2="26" end2="38" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="30" end1="30" start2="48" end2="49" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/carFiles/DrawPanel.java">
       <ranges>
         <range start1="1" end1="1" start2="1" end2="3" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
-        <range start1="15" end1="15" start2="17" end2="19" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
-        <range start1="16" end1="17" start2="20" end2="22" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
-        <range start1="19" end1="24" start2="24" end2="27" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
-        <range start1="25" end1="25" start2="28" end2="29" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
-        <range start1="40" end1="40" start2="44" end2="46" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
+        <range start1="2" end1="2" start2="4" end2="5" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="5" end1="6" start2="8" end2="8" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="7" end1="7" start2="9" end2="10" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="16" end1="16" start2="19" end2="20" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
+        <range start1="17" end1="17" start2="21" end2="27" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
+        <range start1="19" end1="19" start2="29" end2="32" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="23" end1="25" start2="36" end2="37" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="26" end1="26" start2="38" end2="39" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="33" end1="34" start2="46" end2="47" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+        <range start1="40" end1="40" start2="53" end2="54" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="41" end1="41" start2="55" end2="61" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
+        <range start1="50" end1="51" start2="70" end2="71" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="53" end1="54" start2="73" end2="79" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="55" end1="55" start2="80" end2="90" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="56" end1="57" start2="91" end2="91" changelist="7c665b27-020f-4e67-911d-ac62e6f106cf" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/CarModelTree/Truck.java">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
+        <range start1="44" end1="45" start2="44" end2="45" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="58" end1="59" start2="58" end2="59" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="82" end1="89" start2="82" end2="82" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/carFiles/CarView.java">
+      <ranges>
+        <range start1="1" end1="1" start2="1" end2="3" changelist="1b8770b4-1751-4abc-a609-2326616f2686" />
+        <range start1="110" end1="110" start2="112" end2="156" changelist="a55c440b-b26a-46e0-b5a5-5798f2857979" />
       </ranges>
     </file>
   </component>
@@ -74,13 +104,23 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Test" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -111,6 +151,36 @@
       <option name="presentableId" value="Default" />
       <updated>1637139982126</updated>
     </task>
+    <task id="LOCAL−00001" summary="Labb 2">
+      <created>1638289418517</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1638289418517</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Labb 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Labb 2" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="frame.drawPanel.getImage(car)" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

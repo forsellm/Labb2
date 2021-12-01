@@ -30,7 +30,12 @@ public class CarController {
         // Instance of this class
         CarController cc = new CarController();
 
-        cc.cars.add(new Volvo240());
+
+        cc.vehicles.add(new Volvo240());
+        cc.vehicles.add(new Scania(Color.cyan, 75));
+        cc.vehicles.add(new Saab95());
+        cc.setSpaceBetweenVehicles();
+
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
@@ -52,6 +57,7 @@ public class CarController {
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
                 invertDirectionIfNecessary(vehicle);
+
 
             }
         }

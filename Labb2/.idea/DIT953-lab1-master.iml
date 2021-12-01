@@ -5,10 +5,14 @@
     <content url="file://$MODULE_DIR$/CarModelTree">
       <sourceFolder url="file://$MODULE_DIR$/CarModelTree" isTestSource="false" packagePrefix="CarModelTree" />
     </content>
+    <content url="file://$MODULE_DIR$/Test">
+      <sourceFolder url="file://$MODULE_DIR$/Test" isTestSource="false" packagePrefix="Test" />
+    </content>
     <content url="file://$MODULE_DIR$/carFiles">
       <sourceFolder url="file://$MODULE_DIR$/carFiles" isTestSource="false" packagePrefix="carFiles" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="junit" level="project" />
   </component>
 </module>

@@ -42,7 +42,7 @@ public abstract class Truck extends Vehicle {
      */
     public boolean raiseTruckBed(){
         if (this.getCurrentSpeed()==0 && !isTruckBedRaised){
-            setTruckBedRaised(true);
+            isTruckBedRaised=true;
             return true;
         } else {
             System.out.println("Could not mark truck bed as raised");
@@ -56,7 +56,7 @@ public abstract class Truck extends Vehicle {
      */
     public boolean lowerTruckBed() {
         if (this.getCurrentSpeed() == 0 && isTruckBedRaised) {
-            setTruckBedRaised(false);
+            isTruckBedRaised=false;
             return true;
         } else {
             System.out.println("Could not mark truck bed as lowered");
@@ -80,13 +80,6 @@ public abstract class Truck extends Vehicle {
         return tempStatus;
     }
 
-    /**
-     * Sets the status of the truck bed, true for raised, false for lowered.
-     * @param setAs the new status of the truck bed
-     */
-    private void setTruckBedRaised(boolean setAs){
-        this.isTruckBedRaised = setAs;
-    }
 
     /**
      * Gets status of truck bed

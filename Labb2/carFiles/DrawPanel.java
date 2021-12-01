@@ -1,10 +1,14 @@
 package carFiles;
+import CarModelTree.Saab95;
+import CarModelTree.Scania;
 import CarModelTree.Vehicle;
+import CarModelTree.Volvo240;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
@@ -38,6 +42,7 @@ public class DrawPanel extends JPanel{
 
             // Rememember to rightclick src New -> Package -> name: pics -> MOVE *.jpg to pics.
             // if you are starting in IntelliJ.
+
             volvoImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg"));
         } catch (IOException ex)
         {
@@ -48,9 +53,24 @@ public class DrawPanel extends JPanel{
 
     // This method is called each time the panel updates/refreshes/repaints itself
     // TODO: Change to suit your needs.
-    @Override
+    //@Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(volvoImage, volvoPoint.x, volvoPoint.y, null); // see javadoc for more info on the parameters
+
+        for (Vehicle v : vehiclePointHashMap.keySet()) {
+            g.drawImage(vehiclesWithImage.get(v.getClass()), vehiclePointHashMap.get(v).x, vehiclePointHashMap.get(v).y, null);
+
+             // see javadoc for more info on the parameters
+        }
     }
+
+    public int getImageHeight(Vehicle v){
+        return (vehiclesWithImage.get(v.getClass()).getHeight());
+    }
+
+    public void currentCar(Vehicle vehicle){
+        this.currentCarClass= vehicle.getClass();
+    }
+
+
 }

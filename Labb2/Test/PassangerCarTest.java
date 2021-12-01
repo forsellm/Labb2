@@ -1,9 +1,7 @@
 package Test;
 
-import VehicleFiles.Directions;
-import VehicleFiles.Saab95;
-import VehicleFiles.Vehicle;
-import VehicleFiles.Volvo240;
+
+import CarModelTree.*;
 import org.junit.Test;
 
 import java.awt.*;
