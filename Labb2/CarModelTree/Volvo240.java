@@ -24,18 +24,6 @@ public class Volvo240 extends PassengerCar{
      */
     public Volvo240(){
         super(Color.black, 100, "Volvo240",4);
-        try {
-            // You can remove the "pics" part if running outside of IntelliJ and
-            // everything is in the same main folder.
-            // volvoImage = ImageIO.read(new File("Volvo240.jpg"));
-
-            // Rememember to rightclick src New -> Package -> name: pics -> MOVE *.jpg to pics.
-            // if you are starting in IntelliJ.
-            setImage(ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg")));
-        } catch (IOException ex)
-        {
-            ex.printStackTrace();
-        }
     }
 
     /**

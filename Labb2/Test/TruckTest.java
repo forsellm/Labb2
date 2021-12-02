@@ -96,7 +96,7 @@ public class TruckTest {
         s.raiseTruckBed();
         s.startEngine();
         s.gas(0);
-        assertTrue(s.getCurrentSpeed()==0.1);
+        assertTrue(s.getCurrentSpeed()==0.0);
     }
 
     @Test

@@ -2,8 +2,6 @@ package CarModelTree;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
-import java.awt.image.BufferedImage;
-import java.nio.Buffer;
 
 /**
  * Represents a car.
@@ -46,8 +44,6 @@ public abstract class Vehicle implements Movable{
      * The current x- and y-coordinates for this car
      */
     private Point2D.Double coordinates = new Point2D.Double(0.0,0.0);
-
-    private BufferedImage image;
 
     /**
      * Class constructor, sets color, engine power, model name and number och doors
@@ -232,11 +228,4 @@ public abstract class Vehicle implements Movable{
         return coordinates;
     }
 
-    public BufferedImage getImage(){
-        return image;
-    }
-
-    public void setImage(BufferedImage bufferedImage){
-        this.image = bufferedImage;
-    }
 }

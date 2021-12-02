@@ -122,7 +122,7 @@ public class PassangerCarTest {
     public void testStartEngine(){
         Volvo240 v = new Volvo240();
         v.startEngine();
-        assertTrue(v.getCurrentSpeed() == 0.1);
+        assertTrue(v.getCurrentSpeed() == 0.0);
     }
     @Test
     public void testStopEngine(){
@@ -151,7 +151,7 @@ public class PassangerCarTest {
     public void testInitialSpeed(){
         Vehicle c = new Volvo240();
         c.startEngine();
-        assertTrue(c.getCurrentSpeed()==0.1);
+        assertTrue(c.getCurrentSpeed()==0.0);
     }
 
 
