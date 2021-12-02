@@ -1,8 +1,14 @@
 package carFiles;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.geom.Point2D;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.TreeMap;
+
 import CarModelTree.*;
 /*
 * This class represents the Controller part in the MVC pattern.
@@ -22,7 +28,8 @@ public class CarController {
     // The frame that represents this instance View of the MVC pattern
     CarView frame;
     // A list of cars, modify if needed
-    ArrayList<Vehicle> cars = new ArrayList<>();
+
+    ArrayList<Vehicle> vehicles= new ArrayList<>();
 
     //methods:
 
@@ -44,16 +51,19 @@ public class CarController {
         cc.timer.start();
     }
 
+
     /* Each step the TimerListener moves all the cars in the list and tells the
     * view to update its images. Change this method to your needs.
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            for (Vehicle car : cars) {
-                car.move();
-                int x = (int) Math.round(car.getPosition().getX());
-                int y = (int) Math.round(car.getPosition().getY());
-                frame.drawPanel.moveit(x, y);
+            for (Vehicle vehicle : vehicles) {
+
+                frame.drawPanel.currentCar(vehicle);
+                vehicle.move();
+                int x = (int) Math.round(vehicle.getPosition().getX());
+                int y = (int) Math.round(vehicle.getPosition().getY());
+                frame.drawPanel.moveit(vehicle, x, y);
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
                 invertDirectionIfNecessary(vehicle);
@@ -66,8 +76,97 @@ public class CarController {
     // Calls the gas method for each car once
     void gas(int amount) {
         double gas = ((double) amount) / 100;
-        for (Vehicle car : cars) {
-            car.gas(gas);
+        for (Vehicle vehicle : vehicles) {
+            vehicle.gas(gas);
+
         }
     }
+    public void brake(int amount) {
+        double brake = ((double) amount) / 100;
+        for (Vehicle vehicle : vehicles) {
+            vehicle.brake(brake);
+        }   
+    }
+    public void stopAll(){
+        for (Vehicle vehicle : vehicles) {
+            vehicle.stopEngine();
+        }
+    }
+    public void startAll(){
+        for (Vehicle vehicle : vehicles) {
+            vehicle.startEngine();
+        }
+    }
+
+    public void turboOff(){
+        for (Vehicle s:vehicles){
+            if(s.getClass().equals(Saab95.class))
+                ((Saab95) s).setTurboOff();
+        }
+    }
+
+    public void turboOn(){
+        for (Vehicle s:vehicles) {
+            if (s.getClass().equals(Saab95.class)){
+                ((Saab95) s).setTurboOn();
+            }
+        }
+    }
+
+    public void liftTruckBed(){
+        for (Vehicle s:vehicles){
+            if(s.getClass().equals(Scania.class))
+                ((Scania) s).raiseTruckBed();
+        }
+    }
+    public void lowerTruckBed(){
+        for (Vehicle s:vehicles){
+            if(s.getClass().equals(Scania.class))
+                ((Scania) s).lowerTruckBed();
+        }
+    }
+    void invertDirectionIfNecessary(Vehicle car){
+        double yPos = car.getPosition().getY();
+        int yDelta = car.getFacingDirection().getYDelta();
+        if ((yPos+ (frame.drawPanel.getImageHeight(car)) +yDelta >= frame.drawPanel.getHeight()) || (yPos + yDelta <= 0)){
+            car.invertDirection();
+        }
+        
+    }
+
+    void setSpaceBetweenVehicles(){
+        double x=0.0;
+
+        for (Vehicle v: vehicles) {
+            v.setPosition(new Point2D.Double(x, 0.0));
+            x += 200.0;
+        }
+
+    }
+
+
+
+
+   /*
+    void changeDirectionToInverse(){
+        if (invertDirectionNecessary()) {
+            //kod som inverterar riktning
+        }
+    }
+
+    boolean invertDirectionNecessary(Vehicle c) {
+        return (invertDirectionAxisTest((int)Math.round(c.getPosition().getY()), frame.drawPanel.getHeight(),c.getFacingDirection().getYDelta()) ||
+                invertDirectionAxisTest((int)Math.round(c.getPosition().getX()), frame.drawPanel.getWidth(), c.getFacingDirection().getXDelta()));
+    }
+
+    boolean invertDirectionAxisTest(int coordinate, int maxCoordinate, int delta){
+        return ((coordinate + delta >= maxCoordinate) || (coordinate) + delta <= 0);
+    }
+    */
+
+
+
+
+
 }
+
