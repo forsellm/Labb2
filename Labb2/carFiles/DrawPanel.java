@@ -6,7 +6,6 @@ import CarModelTree.Volvo240;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import javax.imageio.ImageIO;
@@ -27,14 +26,17 @@ public class DrawPanel extends JPanel{
     HashMap<Vehicle, Point> vehiclePointHashMap = new HashMap<>();
 
     // To keep track of a singel cars position
-    Point tempPoint = new Point();
+    private Point tempPoint = new Point();
+    private Class currentCarClass;
+
+
 
 
     // TODO: Make this genereal for all cars
     void moveit(Vehicle v, int x, int y){
-        tempPoint.x = x;
-        tempPoint.y = y;
+        vehiclePointHashMap.put(v, new Point(x,y));
     }
+
 
     // Initializes the panel and reads the images
     public DrawPanel(int x, int y) {
@@ -42,7 +44,7 @@ public class DrawPanel extends JPanel{
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.green);
         // Print an error message in case file is not found with a try/catch block
-        try {
+       try {
             // You can remove the "pics" part if running outside of IntelliJ and
             // everything is in the same main folder.
             // volvoImage = ImageIO.read(new File("Volvo240.jpg"));
