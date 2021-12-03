@@ -1,9 +1,6 @@
 package Test;
 
-import VehicleFiles.Saab95;
-import VehicleFiles.ServiceStation;
-import VehicleFiles.Vehicle;
-import VehicleFiles.Volvo240;
+import CarModelTree.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

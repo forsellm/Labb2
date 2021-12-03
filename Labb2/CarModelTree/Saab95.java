@@ -1,12 +1,14 @@
 package CarModelTree;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 /**
  * Represents a car of type Saab95
  *@author Cecilia Nyberg, Maximilian Forsell, Lucas Edeslätt
 */
 public class Saab95 extends PassengerCar implements Turbo{
+
 
     /**
      * The status of the turbo for this Saab95

@@ -1,10 +1,7 @@
 package Test;
 
-import VehicleFiles.CarCarrierTruck;
-import VehicleFiles.Scania;
-import VehicleFiles.Vehicle;
-import VehicleFiles.Volvo240;
 import org.junit.Test;
+import CarModelTree.*;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
