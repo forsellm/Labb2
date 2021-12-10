@@ -6,7 +6,7 @@ import java.awt.*;
  * Represents a car of type Truck
  * @author Cecilia Nyberg, Maximilian Forsell, Lucas Edeslätt
  */
-public abstract class Truck extends Vehicle {
+public abstract class Truck extends Vehicle implements TruckBed{
 
     /**
      * boolean stating whether the truck bed is raised

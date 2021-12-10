@@ -8,7 +8,7 @@ import java.awt.geom.Point2D;
  * A car can be of different types
  * @author Cecilia Nyberg, Maximilian Forsell, Lucas Edeslätt
  */
-public abstract class Vehicle implements Movable{
+public abstract class Vehicle implements VehicleInterface {
 
     /**
      * Engine power of this car

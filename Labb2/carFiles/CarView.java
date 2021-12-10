@@ -17,7 +17,7 @@ import java.util.ArrayList;
  **/
 
 public class CarView extends JFrame{
-    private static final int X = 800;
+    private static final int X = 1300;
     private static final int Y = 800;
 
     // The controller member
@@ -42,6 +42,8 @@ public class CarView extends JFrame{
     JButton startButton = new JButton("Start all cars");
     JButton stopButton = new JButton("Stop all cars");
 
+    JButton addCarButton = new JButton("Add car");
+    JButton removeCarButton = new JButton("Remove car");
     // Constructor
     public CarView(String framename){
         initComponents(framename);

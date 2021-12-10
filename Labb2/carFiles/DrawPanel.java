@@ -1,29 +1,22 @@
 package carFiles;
 import CarModelTree.Saab95;
 import CarModelTree.Scania;
-import CarModelTree.Vehicle;
 import CarModelTree.Volvo240;
 
+import java.util.ArrayList;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.HashMap;
 import javax.imageio.ImageIO;
 import javax.swing.*;
-
+import CarModelTree.VehicleInterface;
 // This panel represent the animated part of the view with the car images.
 // This is a test comment
 
 public class DrawPanel extends JPanel implements AnimateListener{
 
     // Just a single image, TODO: Generalize
-
-    BufferedImage volvoImage;
-    BufferedImage saabImage;
-    BufferedImage scaniaImage;
-
-    HashMap<Class, BufferedImage> vehiclesWithImage = new HashMap<>();
-    HashMap<Vehicle, Point> vehiclePointHashMap = new HashMap<>();
 
     // To keep track of a singel cars position
     private ArrayList<VehicleInterface> vehicleCopy = new ArrayList<>();

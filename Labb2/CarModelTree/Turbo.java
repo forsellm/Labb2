@@ -1,6 +1,6 @@
 package CarModelTree;
 
-public interface Turbo {
+public interface Turbo extends VehicleInterface {
     void setTurboOn();
     void setTurboOff();
 
