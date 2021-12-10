@@ -1,7 +1,11 @@
 package CarModelTree;
 
-import java.awt.*;
+import carFiles.DrawPanel;
+
+import javax.imageio.ImageIO;
+import java.awt.Color;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class Scania extends Truck implements TruckBed {
     /**

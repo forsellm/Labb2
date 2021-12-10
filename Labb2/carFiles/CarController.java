@@ -5,8 +5,6 @@ import javax.swing.event.ChangeListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.TreeMap;
 
 import CarModelTree.*;
 /*
@@ -15,7 +13,8 @@ import CarModelTree.*;
 * modifying the model state and the updating the view.
  */
 
-public class CarController {
+public class CarController implements ActionListener{
+
     // member fields:
 
     // The delay (ms) corresponds to 20 updates a sec (hz)
@@ -52,19 +51,7 @@ public class CarController {
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            for (Vehicle vehicle : vehicles) {
-
-                frame.drawPanel.currentCar(vehicle);
-                vehicle.move();
-                int x = (int) Math.round(vehicle.getPosition().getX());
-                int y = (int) Math.round(vehicle.getPosition().getY());
-                frame.drawPanel.moveit(vehicle, x, y);
-                // repaint() calls the paintComponent method of the panel
-                frame.drawPanel.repaint();
-                invertDirectionIfNecessary(vehicle);
-
-
-            }
+            model.moveCars(frame.getHeightCarArea());
         }
     }
 

@@ -64,6 +64,7 @@ public class DrawPanel extends JPanel implements AnimateListener{
     // TODO: Change to suit your needs.
     //@Override
     protected void paintComponent(Graphics g) {
+
         super.paintComponent(g);
 
         for (VehicleInterface vehicle : vehicleCopy) {
