@@ -227,5 +227,8 @@ public abstract class Vehicle implements Movable{
     public Point2D.Double getCoordinates(){
         return coordinates;
     }
-
+    
+    public String getModelName(){
+        return modelName;
+    }
 }

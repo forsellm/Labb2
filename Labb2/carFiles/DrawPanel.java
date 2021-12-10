@@ -14,7 +14,7 @@ import javax.swing.*;
 // This panel represent the animated part of the view with the car images.
 // This is a test comment
 
-public class DrawPanel extends JPanel{
+public class DrawPanel extends JPanel implements AnimateListener{
 
     // Just a single image, TODO: Generalize
 
@@ -26,44 +26,38 @@ public class DrawPanel extends JPanel{
     HashMap<Vehicle, Point> vehiclePointHashMap = new HashMap<>();
 
     // To keep track of a singel cars position
-    private Point tempPoint = new Point();
-    private Class currentCarClass;
-
-
+    private ArrayList<VehicleInterface> vehicleCopy = new ArrayList<>();
+    private HashMap<Class, BufferedImage> classWithImage = new HashMap<>();
+  //  SpeedTable speedtable = new SpeedTable(150, this.getHeight());
 
 
     // TODO: Make this genereal for all cars
+    /*
     void moveit(Vehicle v, int x, int y){
         vehiclePointHashMap.put(v, new Point(x,y));
     }
-
-
+     */
     // Initializes the panel and reads the images
     public DrawPanel(int x, int y) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.green);
-        // Print an error message in case file is not found with a try/catch block
-       try {
-            // You can remove the "pics" part if running outside of IntelliJ and
-            // everything is in the same main folder.
-            // volvoImage = ImageIO.read(new File("Volvo240.jpg"));
+        loadImages();
 
-            // Rememember to rightclick src New -> Package -> name: pics -> MOVE *.jpg to pics.
-            // if you are starting in IntelliJ.
 
-            volvoImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg"));
-            vehiclesWithImage.put(new Volvo240().getClass(), volvoImage);
-            scaniaImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Scania.jpg"));
-           vehiclesWithImage.put(new Scania(Color.cyan, 20).getClass(),scaniaImage);
-            saabImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Saab95.jpg"));
-           vehiclesWithImage.put(new Saab95().getClass(), saabImage);
 
-        } catch (IOException ex)
-        {
+        //this.add(speedtable);
+
+    }
+
+    private void loadImages(){
+        try {
+            classWithImage.put(Saab95.class, ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Saab95.jpg")));
+            classWithImage.put(Volvo240.class, ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg")));
+            classWithImage.put(Scania.class, ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Scania.jpg")));
+        } catch (IOException ex){
             ex.printStackTrace();
         }
-
     }
 
     // This method is called each time the panel updates/refreshes/repaints itself
@@ -72,20 +66,14 @@ public class DrawPanel extends JPanel{
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        for (Vehicle v : vehiclePointHashMap.keySet()) {
-            g.drawImage(vehiclesWithImage.get(v.getClass()), vehiclePointHashMap.get(v).x, vehiclePointHashMap.get(v).y, null);
-
-             // see javadoc for more info on the parameters
+        for (VehicleInterface vehicle : vehicleCopy) {
+            g.drawImage(classWithImage.get(vehicle.getClass()), (int)Math.round(vehicle.getPosition().getX()), (int)Math.round(vehicle.getPosition().getY()), null);
         }
+        // see javadoc for more info on the parameters
     }
 
-    public int getImageHeight(Vehicle v){
-        return (vehiclesWithImage.get(v.getClass()).getHeight());
+    public void actOnUpdate(ArrayList<VehicleInterface> vehicleCopy) {
+        this.vehicleCopy = vehicleCopy;
+        repaint();
     }
-
-    public void currentCar(Vehicle vehicle){
-        this.currentCarClass= vehicle.getClass();
-    }
-
-
 }

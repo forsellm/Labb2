@@ -1,10 +1,9 @@
 package carFiles;
 import javax.swing.*;
-import java.awt.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.Point2D;
-import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.TreeMap;
@@ -28,27 +27,23 @@ public class CarController {
     // The frame that represents this instance View of the MVC pattern
     CarView frame;
     // A list of cars, modify if needed
+    CarModel model;
+    int gasAmount;
 
-    ArrayList<Vehicle> vehicles= new ArrayList<>();
-
-    //methods:
-
-    public static void main(String[] args) {
-        // Instance of this class
-        CarController cc = new CarController();
-
-
-        cc.vehicles.add(new Volvo240());
-        cc.vehicles.add(new Scania(Color.cyan, 75));
-        cc.vehicles.add(new Saab95());
-        cc.setSpaceBetweenVehicles();
+    public CarController(CarView frame, CarModel model){
+        this.frame = frame;
+        this.model = model;
+        ConnectButtons();
+    }
 
 
-        // Start a new view and send a reference of self
-        cc.frame = new CarView("CarSim 1.0", cc);
+    public void startTimer(){
+        timer.start();
+    }
 
-        // Start the timer
-        cc.timer.start();
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 
 
@@ -73,100 +68,83 @@ public class CarController {
         }
     }
 
-    // Calls the gas method for each car once
-    void gas(int amount) {
-        double gas = ((double) amount) / 100;
-        for (Vehicle vehicle : vehicles) {
-            vehicle.gas(gas);
 
-        }
-    }
-    public void brake(int amount) {
-        double brake = ((double) amount) / 100;
-        for (Vehicle vehicle : vehicles) {
-            vehicle.brake(brake);
-        }   
-    }
-    public void stopAll(){
-        for (Vehicle vehicle : vehicles) {
-            vehicle.stopEngine();
-        }
-    }
-    public void startAll(){
-        for (Vehicle vehicle : vehicles) {
-            vehicle.startEngine();
-        }
-    }
-
-    public void turboOff(){
-        for (Vehicle s:vehicles){
-            if(s.getClass().equals(Saab95.class))
-                ((Saab95) s).setTurboOff();
-        }
-    }
-
-    public void turboOn(){
-        for (Vehicle s:vehicles) {
-            if (s.getClass().equals(Saab95.class)){
-                ((Saab95) s).setTurboOn();
+    private class ButtonListener implements ActionListener{
+            public void actionPerformed(ActionEvent e) {
             }
-        }
     }
 
-    public void liftTruckBed(){
-        for (Vehicle s:vehicles){
-            if(s.getClass().equals(Scania.class))
-                ((Scania) s).raiseTruckBed();
-        }
+    private void ConnectButtons(){
+        frame.gasSpinner.addChangeListener(new ChangeListener() {
+            public void stateChanged(ChangeEvent e) {
+                gasAmount = (int) ((JSpinner) e.getSource()).getValue();
+            }
+        });
+
+        frame.gasButton.addActionListener(new ButtonListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+
+            {
+                model.gas(gasAmount);
+            }
+        });
+
+        frame.brakeButton.addActionListener(new ButtonListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                model.brake(gasAmount);
+            }
+        });
+        frame.turboOnButton.addActionListener(new ButtonListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                model.turboOn();
+            }
+        });
+        frame.turboOffButton.addActionListener(new ButtonListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                model.turboOff();
+            }
+        });
+        frame.stopButton.addActionListener(new ButtonListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                model.stopAll();
+            }
+        });
+
+        frame.startButton.addActionListener(new ButtonListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                model.startAll();
+            }
+        });
+        frame.liftBedButton.addActionListener(new ButtonListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                model.liftTruckBed();
+            }
+        });
+        frame.lowerBedButton.addActionListener(new ButtonListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                model.lowerTruckBed();
+            }
+        });
+        frame.addCarButton.addActionListener(new ButtonListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                model.createRandomVehicle();
+            }
+        });
+        frame.removeCarButton.addActionListener(new ButtonListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                model.removeVehicle();
+            }
+        });
     }
-    public void lowerTruckBed(){
-        for (Vehicle s:vehicles){
-            if(s.getClass().equals(Scania.class))
-                ((Scania) s).lowerTruckBed();
-        }
-    }
-    void invertDirectionIfNecessary(Vehicle car){
-        double yPos = car.getPosition().getY();
-        int yDelta = car.getFacingDirection().getYDelta();
-        if ((yPos+ (frame.drawPanel.getImageHeight(car)) +yDelta >= frame.drawPanel.getHeight()) || (yPos + yDelta <= 0)){
-            car.invertDirection();
-        }
-        
-    }
-
-    void setSpaceBetweenVehicles(){
-        double x=0.0;
-
-        for (Vehicle v: vehicles) {
-            v.setPosition(new Point2D.Double(x, 0.0));
-            x += 200.0;
-        }
-
-    }
-
-
-
-
-   /*
-    void changeDirectionToInverse(){
-        if (invertDirectionNecessary()) {
-            //kod som inverterar riktning
-        }
-    }
-
-    boolean invertDirectionNecessary(Vehicle c) {
-        return (invertDirectionAxisTest((int)Math.round(c.getPosition().getY()), frame.drawPanel.getHeight(),c.getFacingDirection().getYDelta()) ||
-                invertDirectionAxisTest((int)Math.round(c.getPosition().getX()), frame.drawPanel.getWidth(), c.getFacingDirection().getXDelta()));
-    }
-
-    boolean invertDirectionAxisTest(int coordinate, int maxCoordinate, int delta){
-        return ((coordinate + delta >= maxCoordinate) || (coordinate) + delta <= 0);
-    }
-    */
-
-
-
-
-
 }
 

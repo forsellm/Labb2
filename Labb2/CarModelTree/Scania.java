@@ -3,7 +3,7 @@ package CarModelTree;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class Scania extends Truck {
+public class Scania extends Truck implements TruckBed {
     /**
      * Maximum Truck bed angle for this car
      */
